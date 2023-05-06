@@ -3,17 +3,25 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <div>
-        <div>
-          <Image src="/croppedtrain.gif" alt="background image" width="200" height="200" className="h-fit w-full object-contain" />
+      <div className="flex w-full pb-10" style={{ 
+          paddingBottom: `aspect-ratio(1920/900) * 100%`,
+          backgroundImage: `url(/croppedtrain.gif)`,
+          backgroundSize: `full`,
+          backgroundRepeat: `no-repeat`,
+          backgroundPosition: `center`,
+        }}>
+        <div className="flex w-3/5 items-center justify-center text-center">
+          <h1 className="py-16 pb-6 text-3xl font-bold">Animated text here</h1>
         </div>
-        <div>
-
+        <div className="flex w-2/5 justify-center">
+          <Image src="/youngjason.png" 
+                 alt="Picture of me!" 
+                 width={300} 
+                 height={300} 
+                 className="rounded-full pb-24 pt-32 items-center"/>
         </div>
-        
-        
       </div>
-      <div className="flex font-light px-48">
+      <div className="flex font-light px-48 pt-1">
         <div className="flex-row w-4/6 items-center px-4">
           <h1 className="text-4xl py-2">Hi there!</h1>
           <p className="font-light">My name is Jason Cala. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum atque quam magnam aspernatur minima cum ipsum dolorum nulla amet, quisquam ullam officiis. Suscipit laboriosam fuga tenetur labore, cumque quaerat itaque.
@@ -24,9 +32,7 @@ export default function Home() {
             <li>02: Learning Next.js</li>
             <li>03: Learning Tailwind CSS</li>
           </ul>
-          <p className="py-48">Hello</p>
-          <p>Hello</p>
-          <p className="py-48">Hello</p>
+          <p className="pt-24">Add footer</p>
         </div>
         <div className="flex-row w-2/6 items-center px-4">
           <h1 className="text-3xl py-2">Links</h1>

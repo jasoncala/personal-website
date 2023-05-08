@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      roboto: ["var(--font-roboto)"],
-    }
+      roboto: ["var(--font-robot)"],
+    },
   },
   plugins: [],
 }

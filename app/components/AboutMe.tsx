@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Playlist from './Playlist';
 import Image from 'next/image';
 
-// Add actual state management so you can use playlist component (zustand ?)
+// Add actual state management so you can use playlist + other components (zustand ?)
 
 export default function AboutMe(){
     const [showPlaylist, setShowPlaylist] = useState(false);

@@ -1,11 +1,27 @@
+"use client"
+
+import { useState } from 'react';
+import Playlist from './Playlist';
 import Image from 'next/image';
 
-// use actual state management for this in future so we cna use it directly in AboutMe.tsx
-export default function Playlist(){
+// Add actual state management so you can use playlist component (zustand ?)
+
+export default function AboutMe(){
+    const [showPlaylist, setShowPlaylist] = useState(false);
     return (
-        <div className="flex items-start justify-center w-full h-full">
+        <div>
+            <h1 className="text-3xl py-2 font-roboto">About Me</h1>
+            <p className="pb-1 font-roboto">Click below for:</p>
+            <ul className="px-8 list-disc font-roboto">
+                <li><button onClick={() => setShowPlaylist(!showPlaylist)} className="hover:underline">My current top songs! 🎵🎵</button></li>
+                <li><button className="hover:underline">My reading list 📖 </button></li>
+                <li><button className="hover:underline">A surprise (cat pics) 🤔</button></li>
+            </ul>
+            {showPlaylist && <div>
+                <div className="absolute z-10 top-0 left-0 right-0 h-fit">
+                <div className="flex items-start justify-center w-full h-full">
             <div className="bg-black bg-opacity-70 border-2 border-green-500 text-gray-300 min-h-screen p-10 pt-8 rounded-3xl absolute">
-                <div className="flex justify-end"><button onClick={() => console.log("close")} className="hover:underline"><h1>close playlist [X]</h1></button></div>
+                <div className="flex justify-end"><button onClick={() => setShowPlaylist(!showPlaylist)} className="hover:underline"><h1>close playlist [X]</h1></button></div>
                 <div className="flex md:flex-row flex-col">
                     <Image className="mr-6" src="/youngjason.png" alt="cat" width={200} height={200}/>
                     <div className="flex flex-col justify-center">
@@ -45,6 +61,10 @@ export default function Playlist(){
                 </div>
                 
             </div>
+        </div>
+                </div>
+                <div className="fixed opacity-70 bg-gray-950 w-full h-full top-0 left-0"></div>
+            </div>}
         </div>
     )
 }

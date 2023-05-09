@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Playlist from "./components/Playlist";
+import AboutMe from "./components/AboutMe";
 
 export default function Home() {
   return (
@@ -85,13 +86,7 @@ export default function Home() {
                 </a>
             </button>
           </div>
-          <h1 className="text-3xl py-2 font-roboto">About Me</h1>
-          <p className="pb-1 font-roboto">Click below for:</p>
-          <ul className="px-8 list-disc font-roboto">
-            <li>My current top songs! 🎵🎵</li>
-            <li>My reading list 📖</li>
-            <li>A surprise (cat pics) 🤔</li>
-          </ul>
+          <AboutMe/>
           
         </div>
 

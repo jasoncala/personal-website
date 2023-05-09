@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Playlist from "./components/Playlist";
 
 export default function Home() {
   return (
